@@ -88,6 +88,15 @@
 .instagramSvgIcon {
   color: rgb(144, 81, 202);
 }
+/* .tableOuter{
+  margin-top: 10px;
+  border: 2px solid black;
+} */
+
+table, th, td {
+  border: 1px solid;
+  margin:5px 5px !important;
+}
 
 @media screen and (max-width: 600px) {
   .aboutSectionContainer > div {
