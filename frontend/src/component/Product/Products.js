@@ -11,13 +11,13 @@ import Typography from "@material-ui/core/Typography";
 import MetaData from "../layout/MetaData";
 
 const categories = [
-  "Laptop",
-  "Footwear",
-  "Bottom",
-  "Tops",
-  "Attire",
-  "Camera",
-  "SmartPhones",
+  "Akhand",
+  "Plain",
+  "Twisted",
+  "Round",
+  "Coloured",
+  "White",
+  "Other",
 ];
 
 const Products = ({ match }) => {
@@ -26,7 +26,7 @@ const Products = ({ match }) => {
   const alert = useAlert();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([0, 25000]);
+  const [price, setPrice] = useState([0, 250]);
   const [category, setCategory] = useState("");
 
   const [ratings, setRatings] = useState(0);
@@ -39,6 +39,7 @@ const Products = ({ match }) => {
     resultPerPage,
     filteredProductsCount,
   } = useSelector((state) => state.products);
+  
 
   const keyword = match.params.keyword;
 
@@ -66,8 +67,8 @@ const Products = ({ match }) => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="PRODUCTS -- ECOMMERCE" />
-          <h2 className="productsHeading">Products</h2>
+          <MetaData title="PRODUCTS - KDJ" />
+          <h2 className="productsHeading">Products </h2>
 
           <div className="products">
             {products &&
@@ -84,7 +85,7 @@ const Products = ({ match }) => {
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
               min={0}
-              max={25000}
+              max={2500}
             />
 
             <Typography>Categories</Typography>

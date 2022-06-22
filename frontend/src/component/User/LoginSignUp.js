@@ -44,12 +44,18 @@ const LoginSignUp = ({ history, location }) => {
     e.preventDefault();
 
     const myForm = new FormData();
-
     myForm.set("name", name);
     myForm.set("email", email);
     myForm.set("password", password);
     myForm.set("avatar", avatar);
-    dispatch(register(myForm));
+    const dataUser = {
+      "name":name,
+      "email":email,
+      "password":password,
+      "avatar":avatar
+    }
+    // console.log("myForm = ",dataUser);
+    dispatch(register(dataUser));
   };
 
   const registerDataChange = (e) => {
@@ -62,6 +68,7 @@ const LoginSignUp = ({ history, location }) => {
           setAvatar(reader.result);
         }
       };
+      // console.log("reslul",reader.result);
 
       reader.readAsDataURL(e.target.files[0]);
     } else {

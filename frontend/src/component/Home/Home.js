@@ -8,6 +8,8 @@ import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 
+
+
 const Home = () => {
   const alert = useAlert();
   const dispatch = useDispatch();
@@ -27,7 +29,7 @@ const Home = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="ECOMMERCE" />
+          <MetaData title="KANCHAN DEEP JYOT" />
 
           <div className="banner">
             <p>Welcome to Kanchan Deep Jyot</p>
@@ -40,7 +42,7 @@ const Home = () => {
             </a>
           </div>
 
-          <h2 className="homeHeading">Featured Products</h2>
+          <h2 className="homeHeading">Featured Products </h2>
 
           <div className="container" id="container">
             {products &&
